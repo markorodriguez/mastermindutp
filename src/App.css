@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.container a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.container h4{
+    color: wheat;
+    font-family: 'Nova Square', cursive;
+    font-size: 35px;
+}
+
+.content{
+    padding-top: 8%;
+    line-height: 32px;
+}
+
+#first-section, #first{
+    background-color: white;
+}
+
+#second-section, #second{
+    background-color: whitesmoke;
+}
+
+.content .text-justified{
+    text-align: justify;
+    margin-top: 2rem;
+
+}
+
+.text-justified h5{
+    line-height: 1.9;
+}
+
+.content h1{
+    letter-spacing: 3px;
+}
+
+.content span{
+    color: #ea5455;
+}
+
+
+
+
+.green{
+    background-color: #8FBE00;
+}
+
+.purple{
+    background-color: #993394;
+}
+
+.red{
+    background-color: #E22D2D;
+}
+
+.yellow{
+    background-color: #F8CA00;
+}
+
+.blue{
+    background-color: #008C9E;
+}
+
+.brown{
+    background-color: #6b4d39;
+}
+
+.btn-rounded{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px;
+}
+
+.btn-rounded:focus{
+    outline: none;
+}
+
+.butn{
+    margin: 40px 10px;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 800;
+}
+
+
+#btnStart{
+    margin-top: 30px ;
+    border: 1px solid black;
+    font-weight: bolder;
+}
+#validate{
+    padding: 0px 30px;
+    margin: 0px 30px;
+    background-color: wheat;
+    border: 1px solid black;
+    font-weight: 800;
+}
