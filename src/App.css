@@ -97,7 +97,7 @@ body{
 }
 
 
-#btnStart{
+#btnStart, #resetBtn{
     margin-top: 30px ;
     border: 1px solid black;
     font-weight: bolder;
