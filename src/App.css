@@ -53,7 +53,6 @@ body{
 
 
 
-
 .green{
     background-color: #8FBE00;
 }
@@ -108,4 +107,20 @@ body{
     background-color: wheat;
     border: 1px solid black;
     font-weight: 800;
+}
+
+.respuestas .handleValidate{
+    background-color: #2d4059;
+    color: #decdc3;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin-left: 1rem ;
+}
+
+.btn-container .validar{
+    border-radius: 10px;
+    margin: 0px 10px;
+    color: black;
+    
 }
