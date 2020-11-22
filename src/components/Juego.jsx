@@ -12,12 +12,11 @@ export default function Game() {
     const [game, setGame] = useState(false) //true = juego finalizado 
     const [hints, setHints] = useState([])
     const [winCondition, setWinCondition] = useState(false) //true=ganado
-
+    const [user, setUser] = useState("")
     //               0            1       2       3       4           5
     const colors = ['green', 'purple', 'red', 'yellow', 'blue', 'brown']
     const [counter, setCounter] = useState(0)
     //
-    
 
     const addCount = (evt) => {
         let savedArray = [...guesses];
@@ -53,6 +52,7 @@ export default function Game() {
     const indexesToIgnoreA2 = [];
     let i = 0;
     let j = 0;
+
 
     const compareArrays = (a1, a2) => {
         let numSameTmp = 0;
@@ -104,7 +104,7 @@ export default function Game() {
             }
             setSecret(code)
             setDisabled(false)
-
+            setUser(username)
             alert(username + ' el juego ha empezado')
             document.getElementById('btnStart').style.display = "none"
         }
@@ -116,21 +116,24 @@ export default function Game() {
         setAnswers([])
         setSecret([])
         setCounter(0)
-
+        setHints([])
         generateColors();
     }
 
     const styleOption = "butn btn-rounded"
-
+    
     const cancelModal = () => {
-        setGame(false)
-        setAnswers([])
+        setDisabled(true)
+            setGame(false)
+            setAnswers([])
+            setWinCondition(false)
+            document.getElementById('resetBtn').style.visibility = ""
     }
 
     return (
         <div className="container-fluid" style={{ textAlign: 'center' }}>
-            <Modal show={game} modalClosed={cancelModal}>
-                {winCondition===true ? <Win/> : <Lose/>}
+            <Modal show={game} modalClosed={cancelModal}   >
+                {winCondition===true ? <Win username={user}  cant={counter} close={cancelModal}/> : <Lose username={user}  cant={counter}/>}
             </Modal>
             <div>
                 <button className="btn" onClick={generateColors} id="btnStart">START GAME</button> <br />
