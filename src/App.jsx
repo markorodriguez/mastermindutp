@@ -8,6 +8,7 @@ import {
 
 import Juego from "./components/Juego";
 import Reglas from "./components/Reglas";
+import Ranking from "./components/Ranking"
 
 import "./App.css"
 
@@ -38,6 +39,9 @@ function App() {
                             <li className="nav-item">
                                 <Link to="/juego">Jugar</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/ranking">Ranking</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -48,6 +52,9 @@ function App() {
                 </Route>
                 <Route exact path="/juego">
                     <Juego />
+                </Route>
+                <Route exact path="/ranking">
+                    <Ranking />
                 </Route>
             </Switch>
         </Router>

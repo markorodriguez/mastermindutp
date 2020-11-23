@@ -133,7 +133,7 @@ export default function Game() {
     return (
         <div className="container-fluid" style={{ textAlign: 'center' }}>
             <Modal show={game} modalClosed={cancelModal}   >
-                {winCondition===true ? <Win username={user}  cant={counter} close={cancelModal}/> : <Lose username={user}  cant={counter}/>}
+                {winCondition===true ? <Win username={user}  cant={counter} close={cancelModal}/> : <Lose username={user} answer={secret} cant={counter}/>}
             </Modal>
             <div>
                 <button className="btn" onClick={generateColors} id="btnStart">START GAME</button> <br />
